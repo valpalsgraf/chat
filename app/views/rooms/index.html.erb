@@ -1,17 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<div class=" mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10 bg-midnight text-tahiti">
-  <h1 class="mb-4 text-3xl font-black">Here are all our rooms!</h1>
-  <p class="text-lg leading-snug">Select <em>one</em> and send a message</p>
-</div>
+<section class="font-serif">
+  <div class="mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10 bg-midnight text-tahiti">
+    <h1 class="text-3xl font-serif text-blue-600">Here are all our rooms!</h1>
+    <p class="text-lg leading-snug">Select <em>one</em> and send a message</p>
+  </div>
+</section>
 
-<div id="rooms">
-  <% @rooms.each do |room| %>
-    <%= render room %>
-    <p>
-      <%= link_to "Show this room", room %>
-    </p>
-  <% end %>
-</div>
+<section class="mx-auto mt-16 max-w-sm rounded overflow-hidden shadow-lg p-10 text-orange-600">
+  <div id="rooms">
+    <% @rooms.each do |room| %>
+      <%= render room %>
+      <p>
+        <%= link_to "Show this room", room %>
+      </p>
+    <% end %>
+  </div>
+</section>
 
-<%= link_to "New room", new_room_path %>
+<%= link_to "New room", new_room_path %>  
