@@ -65,3 +65,5 @@ group :test do
 end
 
 gem "importmap-rails", "~> 1.1"
+
+gem "tailwindcss-rails", "~> 2.0"
