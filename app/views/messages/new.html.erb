@@ -4,7 +4,9 @@
   <%= form_with(model: [ @message.room, @message ],
       data: {controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |form| %>
     <div class="field">
-      <%= form.text_field :content %>
+      <textarea class="resize-y rounded-md">
+       <%= form.text_field :content %>
+      </textarea>
       <%= form.submit "Send" %>
     </div>
   <% end %>
