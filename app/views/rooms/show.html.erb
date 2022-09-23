@@ -6,10 +6,12 @@
   <%= render @room %>
 
   <p>
-    <%= link_to "Edit this room", edit_room_path(@room) %> |
-    <%= link_to "Back to rooms", rooms_path, "data-turbo-frame": "_top" %>
-
-    <%= button_to "Destroy this room", @room, method: :delete %>
+    <button class="bg-gray pt-2 pr-2 pb-2 pl-2 rounded shadow-lg shadow-gray hover:bg-sky-700 focus:outline-none focus:ring focus:ring-black">
+      <%= link_to "Edit this room", edit_room_path(@room) %> 
+    </button>            
+    <button class="bg-gray pt-2 pr-2 pb-2 pl-2 rounded shadow-lg shadow-gray hover:bg-sky-700 focus:outline-none focus:ring focus:ring-black">
+      <%= link_to "Back to rooms", rooms_path, "data-turbo-frame": "_top" %>
+    </button>
   </p>
 <% end %>
 
