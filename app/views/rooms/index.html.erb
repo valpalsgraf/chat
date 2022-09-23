@@ -1,17 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<div class=" mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10 bg-midnight text-tahiti">
-  <h1 class="mb-4 text-3xl font-black">Here are all our rooms!</h1>
-  <p class="text-lg leading-snug">Select <em>one</em> and send a message</p>
-</div>
+<section class="font-serif">
+  <div class="relative mx-auto mt-16 text-center max-w-sm rounded overflow-hidden shadow-lg p-10 bg-midnight text-tahiti">
+    <h1 class="text-3xl font-serif font-black text-blue-600">Here are all our rooms!</h1>
+    <p class="text-lg leading-snug">Select <a class="underline decoration-sky-500"><em>one</em></a> and send a message</p>
+  </div>
+</section>
 
-<div id="rooms">
-  <% @rooms.each do |room| %>
-    <%= render room %>
-    <p>
-      <%= link_to "Show this room", room %>
-    </p>
-  <% end %>
-</div>
+<section class="absolute bottom-0 left-0 mx-auto mt-16 max-w-sm rounded overflow-hidden shadow-lg p-10">
+  <div class="grid grid-cols-3 gap-4">
+    <div id="rooms">
+      <% @rooms.each do |room| %>
+        <%= render room %>
+        <button class="bg-gray pt-2 pr-2 pb-2 pl-2 rounded shadow-lg shadow-gray hover:bg-sky-700 focus:outline-none focus:ring focus:ring-black">
+          <%= link_to "Show this room", room %>
+        </button>
+      <% end %>
+    </div>
+  </div>
+</section>
 
-<%= link_to "New room", new_room_path %>
+
+
+<button class="bg-gray object-bottom rounded shadow-lg shadow-gray hover:bg-sky-700 focus:outline-none focus:ring focus:ring-black">
+  <%= link_to "New room", new_room_path %>  
+</button>
