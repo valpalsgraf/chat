@@ -3,7 +3,7 @@
 <%= turbo_frame_tag "new_message", target: "_top" do %>
   <%= form_with(model: [ @message.room, @message ],
       data: {controller: "reset-form", action: "turbo:submit-end->reset-form#reset"}) do |form| %>
-    <div class="field">
+    <div class="field scroll-smooth">
       <textarea class="resize-y rounded-md">
        <%= form.text_field :content %>
       </textarea>

@@ -1,7 +1,17 @@
-<h1>New room</h1>
-
-<%= render "form", room: @room %>
-
-<div>
-  <%= link_to "Back to rooms", rooms_path %>
+<div class="grid grid-rows-3 grid-flow-col gap-4">
+  <div>
+    <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 pt-2 pr-2 pb-2 pl-2 rounded shadow-lg shadow-gray focus:outline-none focus:ring focus:ring-black">
+      <div class= "text-3xl font-serif font-black text-white">
+        <h1> New room </h1>
+      </div>
+    </div>
+  </div>
+  <div>
+    <%= render "form", room: @room %>
+  </div>
+  <div>
+    <div>
+      <%= link_to "Back to rooms", rooms_path %>
+    </div>
+  </div>
 </div>
